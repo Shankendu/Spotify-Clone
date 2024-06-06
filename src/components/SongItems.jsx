@@ -4,7 +4,7 @@ import { assets } from "../assets/assets";
 export default function SongItems({ name, image, desc }) {
   return (
     <>
-      <div className="min-w-[210px] rounded py-2 px-3 cursor-pointer hover:bg-gradient-to-br from-transparent from-30% to-[#ffffff0f] select-none relative">
+      <div className="min-w-[210px] rounded py-2 px-3 cursor-pointer hover:bg-gradient-to-br from-transparent from-30% to-[#ffffff0f] select-none relative overflow-hidden">
         <img draggable={false} className="rounded" src={image} alt="" />
         <p className="text-white font-bold mt-2 mb-1">{name}</p>
         <p className="text-slate-200/30 text-sm font-medium">{desc}</p>

@@ -10,7 +10,7 @@ export default function Display() {
         <Navbar />
 
         <div className="p-3">
-          <h1 className="text-2xl my-2 font-bold text-white">Feaured Charts</h1>
+          <h1 className="text-2xl my-2 font-bold text-white">Featured Charts</h1>
           <div className="flex overflow-x-auto select-none scroll-smooth">
             {albumsData.map((items) => (
               <AlbumItems
@@ -24,7 +24,7 @@ export default function Display() {
         </div>
 
         <div className="p-3 ">
-          <h1 className="text-2xl my-2 font-bold text-white">Feaured Charts</h1>
+          <h1 className="text-2xl my-2 font-bold text-white">Recent Biggest Hits</h1>
           <div className="flex overflow-x-auto select-none scroll-smooth">
             {songsData.map((items) => (
               <SongItems
