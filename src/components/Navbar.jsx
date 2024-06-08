@@ -2,21 +2,25 @@ import { useNavigate } from "react-router";
 import { assets } from "../assets/assets";
 
 export default function Navbar() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <>
       <div className="flex flex-col">
         <div className="flex justify-between items-center font-semibold">
           <div className="p-3 flex gap-2">
             <img
-            onClick={()=>{navigate(-1)}}
+              onClick={() => {
+                navigate(-1);
+              }}
               draggable={false}
               className="h-8 p-2 rounded-full bg-[#0a0a0a] cursor-pointer"
               src={assets.arrow_left}
               alt="left-arrow"
             />
             <img
-            onClick={()=>{navigate(1)}}
+              onClick={() => {
+                navigate(1);
+              }}
               draggable={false}
               className="h-8 p-2 rounded-full bg-[#0a0a0a] cursor-pointer"
               src={assets.arrow_right}
@@ -38,11 +42,11 @@ export default function Navbar() {
             </div>
             <img
               draggable={false}
-              className="h-8 p-2 rounded-full bg-[#0a0a0a] hover:scale-105 cursor-pointer"
+              className="h-8 p-2 rounded-full bg-[#0a0a0a] hover:scale-105 cursor-pointer hidden lg:block"
               src={assets.bell_icon}
               alt="bell"
             />
-            <p className="lg:h-8 h-6 lg:w-8 w-6 flex items-center justify-center font-bold rounded-full bg-[#ff6437] border-4 border-black text-black lg:hover:scale-105 cursor-pointer">
+            <p className="hidden lg:h-8 h-6 lg:w-8 w-6 lg:flex items-center justify-center font-bold rounded-full bg-[#ff6437] border-4 border-black text-black lg:hover:scale-105 cursor-pointer">
               S
             </p>
           </div>
