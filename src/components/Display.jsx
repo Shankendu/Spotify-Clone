@@ -2,6 +2,7 @@ import AlbumItems from "./AlbumItems";
 import Navbar from "./Navbar";
 import { albumsData, songsData } from "../assets/assets";
 import SongItems from "./SongItems";
+import { Link } from "react-router-dom";
 
 export default function Display() {
   return (
@@ -10,28 +11,33 @@ export default function Display() {
         <Navbar />
 
         <div className="p-3">
-          <h1 className="text-2xl my-2 font-bold text-white">Featured Charts</h1>
+          <h1 className="text-2xl my-2 font-bold text-white">
+            Featured Charts
+          </h1>
           <div className="flex overflow-x-auto select-none scroll-smooth">
             {albumsData.map((items) => (
-              <AlbumItems
-                key={items.id}
-                image={items.image}
-                name={items.name}
-                desc={items.desc.slice(0,20) + "..."}
-              />
+              <Link key={items.id} to={"/albums/" + items.id}>
+                <AlbumItems
+                  image={items.image}
+                  name={items.name}
+                  desc={items.desc.slice(0, 20) + "..."}
+                />
+              </Link>
             ))}
           </div>
         </div>
 
         <div className="p-3 ">
-          <h1 className="text-2xl my-2 font-bold text-white">Recent Biggest Hits</h1>
+          <h1 className="text-2xl my-2 font-bold text-white">
+            Recent Biggest Hits
+          </h1>
           <div className="flex overflow-x-auto select-none scroll-smooth">
             {songsData.map((items) => (
               <SongItems
                 key={items.id}
                 image={items.image}
                 name={items.name}
-                desc={items.desc.slice(0,20) + "..."}
+                desc={items.desc.slice(0, 20) + "..."}
               />
             ))}
           </div>
